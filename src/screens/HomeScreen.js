@@ -25,7 +25,7 @@ const HomeScreen = ({ navigation }) => {
             setError(false);
             const response = await fetch(API_URL);
             const data = await response.json();
-            // console.log(data);
+             console.log(data);
             setTasks(data);
             await AsyncStorage.setItem('tasks', JSON.stringify(data));
         } catch (error) {
